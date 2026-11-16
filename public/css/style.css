@@ -1,9 +1,8 @@
 /* ============================================================
    AMAPIANO IS HERE
-   Palette pulled from the @amapianoishere flyers, which line up with
-   the South African flag: chilli red, gold, green, blue, black, white,
+   Palette pulled from the @amapianoishere flyers and club lighting:
+   chilli red, gold, green, blue, black, cream,
    plus the anniversary pink and the Holocene kraft orange.
-   Pattern language: Zulu beadwork triangles and isihlangu (shield) ovals.
    ============================================================ */
 
 :root {
@@ -35,8 +34,6 @@
   --r-pill: 999px;
   --ease: cubic-bezier(.2, .8, .2, 1);
 
-  /* Zulu beadwork band: gold/red/green/blue triangles between bead rows */
-  --beads: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='28' viewBox='0 0 32 28'%3E%3Crect width='32' height='28' fill='%23110D0B'/%3E%3Cg fill='%23F6EEDF'%3E%3Crect x='1' y='1' width='2' height='2'/%3E%3Crect x='5' y='1' width='2' height='2'/%3E%3Crect x='9' y='1' width='2' height='2'/%3E%3Crect x='13' y='1' width='2' height='2'/%3E%3Crect x='17' y='1' width='2' height='2'/%3E%3Crect x='21' y='1' width='2' height='2'/%3E%3Crect x='25' y='1' width='2' height='2'/%3E%3Crect x='29' y='1' width='2' height='2'/%3E%3Crect x='1' y='25' width='2' height='2'/%3E%3Crect x='5' y='25' width='2' height='2'/%3E%3Crect x='9' y='25' width='2' height='2'/%3E%3Crect x='13' y='25' width='2' height='2'/%3E%3Crect x='17' y='25' width='2' height='2'/%3E%3Crect x='21' y='25' width='2' height='2'/%3E%3Crect x='25' y='25' width='2' height='2'/%3E%3Crect x='29' y='25' width='2' height='2'/%3E%3C/g%3E%3Cpolygon points='0,22 8,6 16,22' fill='%23FFB81C'/%3E%3Cpolygon points='8,6 24,6 16,22' fill='%23E2382B'/%3E%3Cpolygon points='16,22 24,6 32,22' fill='%23007749'/%3E%3Cpolygon points='24,6 40,6 32,22' fill='%231A2FA0'/%3E%3Cpolygon points='-8,6 8,6 0,22' fill='%231A2FA0'/%3E%3Ccircle cx='16' cy='12' r='1.6' fill='%23F6EEDF'/%3E%3Ccircle cx='0' cy='12' r='1.6' fill='%23F6EEDF'/%3E%3Ccircle cx='32' cy='12' r='1.6' fill='%23F6EEDF'/%3E%3C/svg%3E");
   --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
@@ -83,15 +80,6 @@ button { font: inherit; color: inherit; cursor: pointer; }
   max-width: 14ch;
   text-wrap: balance;
 }
-.zulu-head {
-  display: block;
-  font-family: var(--serif); font-style: italic; font-weight: 400;
-  text-transform: none; letter-spacing: 0;
-  font-size: 0.5em; line-height: 1.1; margin-bottom: 0.12em;
-  color: var(--gold);
-}
-.zulu { font-family: var(--serif); font-size: 1.5rem; line-height: 1.3; margin: 0; }
-.zulu em { font-style: italic; }
 p { margin: 0 0 1em; max-width: 62ch; }
 .lede { font-size: 1.25rem; line-height: 1.5; font-weight: 500; }
 
@@ -223,9 +211,6 @@ body.grooving .badge { animation-duration: 4.25s; }
 .next span { font-weight: 600; font-size: 0.95rem; }
 .next .count { font-variant-numeric: tabular-nums; color: var(--red); font-weight: 800; }
 
-/* ---------- Beadwork bands ---------- */
-.beads { height: 28px; background: var(--beads) repeat-x center / 32px 28px; }
-.beads--hero { position: absolute; left: 0; right: 0; bottom: 0; }
 
 /* ---------- Ticker ---------- */
 .ticker { background: var(--ink); color: var(--gold); overflow: hidden; padding: 14px 0; border-bottom: 1px solid var(--line); }
@@ -246,7 +231,6 @@ body.grooving .badge { animation-duration: 4.25s; }
 /* About: cream paper */
 .about { background: var(--cream); color: var(--ink); }
 .about .h2 { color: var(--ink); }
-.about .zulu { color: var(--red-deep); margin-top: 8px; }
 .about__grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px 72px; align-items: start; }
 .about__body p:not(.lede) { color: #3f342d; }
 .facts { display: grid; grid-template-columns: repeat(3, 1fr); margin: 40px 0 0; border-top: 2px solid var(--ink); }
@@ -261,7 +245,6 @@ body.grooving .badge { animation-duration: 4.25s; }
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background: radial-gradient(60% 80% at 100% 0%, rgba(255, 184, 28, 0.18), transparent 60%);
 }
-.sound .zulu-head { color: var(--gold); }
 .sound__grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px 72px; align-items: center; position: relative; }
 .sound__copy p { color: rgba(246, 238, 223, 0.86); }
 .sound__try { color: var(--gold) !important; font-weight: 800; margin-top: 1.4em; }
@@ -355,7 +338,6 @@ body.grooving .badge { animation-duration: 4.25s; }
 
 /* Nights: kraft paper, ticket-stub rows */
 .nights { background: var(--kraft); color: var(--ink); }
-.nights .zulu-head { color: var(--red-deep); }
 .timeline { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .night {
   display: grid; grid-template-columns: 150px 1.1fr 1.3fr; gap: 6px 28px; align-items: center;
@@ -427,7 +409,6 @@ body.grooving .badge { animation-duration: 4.25s; }
 
 /* Join: gold flyer */
 .join { background: var(--gold); color: var(--ink); }
-.join .zulu-head { color: var(--red-deep); }
 .join__grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 40px 72px; align-items: start; }
 .join__small { font-size: 0.95rem; }
 
@@ -523,13 +504,6 @@ body.grooving .badge { animation-duration: 4.25s; }
 .hero__copy { min-width: 0; }
 
 .hero__side { display: flex; flex-direction: column; align-items: center; gap: 28px; }
-.poster {
-  width: 260px; padding: 18px 20px 16px; background: var(--cream); color: var(--ink);
-  border: 2px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); transform: rotate(3deg);
-  background-image: linear-gradient(var(--cream), var(--cream)), var(--beads);
-  background-repeat: no-repeat, repeat-x; background-size: 100% calc(100% - 14px), 32px 28px; background-position: top, bottom;
-  padding-bottom: 30px;
-}
 .poster p { margin: 0; }
 .poster__k { font-family: var(--serif); font-style: italic; font-size: 1.15rem; color: var(--red-deep); }
 .poster__n { font-family: var(--display); text-transform: uppercase; font-size: 1.9rem; line-height: 1; }
@@ -543,12 +517,6 @@ body.grooving .badge { animation-duration: 4.25s; }
 
 /* Beadwork progress strip that fills as you scroll */
 .progress { position: absolute; left: 0; right: 0; bottom: -7px; height: 7px; pointer-events: none; }
-.progress span {
-  display: block; height: 100%; width: 0;
-  background: var(--beads) repeat-x left center;
-  background-size: 8px 7px;
-  box-shadow: 0 2px 0 var(--ink);
-}
 
 /* JS drives these when motion is allowed */
 .js-motion .ticker__track, .js-motion .badge { animation: none; }
@@ -834,3 +802,17 @@ body.grooving .badge { animation-duration: 4.25s; }
 .nav__mark { transition: opacity .25s; }
 .nav:not(.is-solid) .nav__mark { opacity: 0; pointer-events: none; }
 @media (max-width: 960px) { body.has-sticky .nav__cta--always { visibility: hidden; } }
+
+/* Colour band between sections: the flyer palette as a plain striped rule */
+.band { height: 12px; background: linear-gradient(90deg, var(--red) 0 25%, var(--gold) 25% 50%, var(--green) 50% 75%, var(--blue) 75% 100%); border-block: 2px solid var(--ink); }
+.band--hero { position: absolute; left: 0; right: 0; bottom: 0; }
+.foot__mail a { color: var(--gold); }
+
+/* ---- Toned-down palette use: no four-colour flag combinations ---- */
+.band { height: 6px; background: var(--gold); border-block: 0; box-shadow: 0 -1px 0 var(--ink), 0 1px 0 var(--ink); }
+.marquee i, .marquee i:nth-of-type(3n), .marquee i:nth-of-type(3n+1) { background: var(--red); border-radius: 50%; transform: none; }
+.marquee__row--gold i { background: var(--cream); }
+/* Playlist: let the blue stage light in the photo set the colour instead of a flat block */
+.playlist { background: var(--ink); }
+.playlist .section__photo { mix-blend-mode: normal; opacity: .5; }
+.playlist::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(17,13,11,.85) 0%, rgba(17,13,11,.45) 100%); }

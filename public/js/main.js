@@ -14,10 +14,8 @@
   $("#year").textContent = new Date().getFullYear();
   const L = C.links || {};
   if (L.instagram) $("#igLink").href = L.instagram; else $("#igLink").parentElement.remove();
-  if (L.email) {
-    $("#mailLink").href = "mailto:" + L.email;
-    if (C.preview) $("#mailLink").textContent = "Bookings: " + L.email;
-  } else $("#mailLink").parentElement.remove();
+  if (L.email) { $("#mailLink").href = "mailto:" + L.email; $("#mailLink").textContent = L.email; }
+  else $("#mailLink").parentElement.remove();
   if (L.presenter) $("#presenterLink").href = L.presenter;
 
   /* ---------- Nav + sticky sign-up button ---------- */
@@ -278,7 +276,7 @@
       }
       form.classList.add("is-sent");
       status.className = "form__status ok";
-      status.innerHTML = `<em>Siyabonga, ${esc(data.name)}.</em>You're on the 2027 list.` +
+      status.innerHTML = `<em>Thank you, ${esc(data.name)}.</em>You're on the 2027 list.` +
         (C.preview ? `<small>Preview only: sign-ups save once the site is live.</small>` : "");
       onScroll();
     } catch (err) {
