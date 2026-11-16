@@ -1,0 +1,15 @@
+{
+  // The name must match the Worker's name in your Cloudflare dashboard.
+  "name": "amapiano-is-here",
+  "main": "src/worker.js",
+  "compatibility_date": "2025-09-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*"]
+  },
+  // Keep variables you set in the dashboard (like WEBHOOK_URL) between deploys.
+  "keep_vars": true,
+  "observability": { "enabled": true }
+}
