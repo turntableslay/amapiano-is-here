@@ -1,3 +1,9 @@
+/
+  Cache-Control: no-cache
+
+/index.html
+  Cache-Control: no-cache
+
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: SAMEORIGIN
@@ -6,10 +12,10 @@
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://open.spotify.com; connect-src 'self' https:; media-src 'self'
 
 /css/*
-  Cache-Control: public, max-age=86400
+  Cache-Control: no-cache
 
 /js/*
-  Cache-Control: public, max-age=3600
+  Cache-Control: no-cache
 
 /assets/*
   Cache-Control: public, max-age=604800
